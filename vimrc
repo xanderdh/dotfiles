@@ -2,12 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
-Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'preservim/nerdcommenter'
-"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-"Plug 'ryanoasis/vim-devicons' "neet to install additionalfont
 Plug 'vim-airline/vim-airline'
-"Plug 'jiangmiao/auto-pairs'
 Plug 'kien/ctrlp.vim'
 
 "git
@@ -31,8 +26,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|git'
 set number
 set expandtab
 set tabstop=2
+set shiftwidth=2
 
-syntax on
 set spell spelllang=en_us
 set hlsearch
 set incsearch

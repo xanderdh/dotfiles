@@ -1,0 +1,6 @@
+[user]
+	name = @denys.cudev
+	email = denys.v@cudev.org
+
+[alias]
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short

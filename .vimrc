@@ -24,6 +24,7 @@ set background=dark
 let g:ctrlp_custom_ignore = 'node_modules\|git'
 
 set number
+set nu rnu "turn hybrid line numbers on
 set expandtab
 set tabstop=2
 set shiftwidth=2

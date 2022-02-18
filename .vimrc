@@ -23,6 +23,9 @@ set background=dark
 
 let g:ctrlp_custom_ignore = 'node_modules\|git'
 
+set foldmethod=syntax
+set nofoldenable
+
 set number
 set nu rnu "turn hybrid line numbers on
 set expandtab

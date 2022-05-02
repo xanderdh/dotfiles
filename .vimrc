@@ -13,6 +13,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim' "TS Syntax
 
+"Code
+Plug 'sheerun/vim-polyglot' "Syntax
+Plug 'preservim/nerdcommenter' "Comment
+
 "colorschema
 Plug 'morhetz/gruvbox'
 
@@ -23,6 +27,10 @@ set background=dark
 
 let g:ctrlp_custom_ignore = 'node_modules\|git'
 
+"nerdcommenter cofig
+filetype plugin on
+
+"folding
 set foldmethod=syntax "syntax highlighting items specify folds  
 set foldcolumn=1 "defines 1 col at window left, to indicate folding  
 let javaScript_fold=1 "activate folding by JS syntax  

@@ -1,6 +1,6 @@
 [user]
-	name = @name
-	email = my@git.com
+	name = name
+	email = email 
 [core]
   pager = delta
   editor = vim

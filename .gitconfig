@@ -1,6 +1,11 @@
 [user]
 	name = @name
 	email = my@git.com
-
-[alias]
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[core]
+  pager = delta
+  editor = vim
+[pull]
+  rebase = false
+[delta]
+  line-numbers = true
+  side-by-side = true

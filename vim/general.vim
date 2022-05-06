@@ -1,8 +1,6 @@
 colorscheme gruvbox
 set background=dark
 
-let g:ctrlp_custom_ignore = 'node_modules\|git'
-
 "nerdcommenter cofig
 filetype plugin on
 

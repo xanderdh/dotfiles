@@ -1,4 +1,6 @@
-"mappings
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
 map <C-n> :NERDTreeToggle<CR>
 map <C-L> :CocCommand prettier.formatFile<CR>
 map <C-F> :Rg<CR>

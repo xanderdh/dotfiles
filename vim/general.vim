@@ -1,7 +1,7 @@
 colorscheme gruvbox
 set background=dark
 
-"nerdcommenter cofig
+"nerd commenter config
 filetype plugin on
 
 "folding
@@ -22,7 +22,7 @@ set mouse=a
 set spell spelllang=en_us       "spelling
 set nohlsearch                  "no highlighting
 set incsearch                   "incremental search
-set ignorecase                  "ignorecae in search
+set ignorecase                  "ignore case in search
 
 let NERDTreeShowHidden=1
 

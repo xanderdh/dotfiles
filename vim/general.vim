@@ -6,7 +6,7 @@ filetype plugin on
 
 "folding
 set foldmethod=syntax           "syntax highlighting items specify folds  
-set foldcolumn=1                "defines 1 col at window left, to indicate folding  
+"set foldcolumn=1                "defines 1 col at window left, to indicate folding  
 let javaScript_fold=1           "activate folding by JS syntax  
 set foldlevelstart=99           "start file with all folds opened
 
@@ -19,7 +19,7 @@ set tabstop=2
 set shiftwidth=2
 set mouse=a
 
-set spell spelllang=en_us
+set spell spelllang=en_us       "spelling
 set nohlsearch                  "no highlighting
 set incsearch                   "incremental search
 set ignorecase                  "ignorecae in search

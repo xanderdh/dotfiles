@@ -4,8 +4,8 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'voldikss/vim-floaterm'
+Plug 'junegunn/fzf.vim' "Fuzzy search
+Plug 'voldikss/vim-floaterm' "Terminal
 
 "git
 Plug 'tpope/vim-fugitive'
@@ -23,3 +23,4 @@ Plug 'preservim/nerdcommenter' "Comment
 Plug 'morhetz/gruvbox'
 
 call plug#end()
+

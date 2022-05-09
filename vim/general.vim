@@ -19,8 +19,10 @@ set mouse=a
 
 set spell spelllang=en_us
 set nohlsearch                  "no highlighting
-set incsearch
-set ignorecase
+set incsearch                   "incremental search
+set ignorecase                  "ignorecae in search
 
 let NERDTreeShowHidden=1
+
+set diffopt+=vertical           "show diffs side by side"
 

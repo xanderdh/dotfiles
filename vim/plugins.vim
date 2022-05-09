@@ -3,6 +3,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } "Markdown preview
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' "Fuzzy search
 Plug 'voldikss/vim-floaterm' "Terminal

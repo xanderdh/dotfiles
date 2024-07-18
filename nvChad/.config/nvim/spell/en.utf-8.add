@@ -12,8 +12,6 @@ intlIntl
 initSearchLimiters
 initConfig
 intlSuccess
-ebsco
 lodash
-osano
 api
 axios

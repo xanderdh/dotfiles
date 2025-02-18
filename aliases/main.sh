@@ -11,3 +11,7 @@ fi
 if [ -f ~/dotfiles/aliases/system.sh ]; then
     . ~/dotfiles/aliases/system.sh
 fi
+
+if [ -f ~/dotfiles/aliases/docker.sh ]; then
+    . ~/dotfiles/aliases/docker.sh
+fi

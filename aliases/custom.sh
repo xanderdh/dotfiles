@@ -1,3 +1,3 @@
 #/bin/zsh
 
-# Custom aliases
+# Custom aliases test

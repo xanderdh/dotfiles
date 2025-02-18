@@ -6,7 +6,7 @@ This package contains alias files organized by different purposes.
 
 - `main`: The main file to source in your `.bashrc`.
 - `git.sh`: Contains aliases related to Git commands.
-- `custom.sh`: Contains custom aliases for the system it is installed on. This file is intended to store security-sensitive aliases and git-ignored.
+- `custom.sh`: Contains custom aliases for the system it is installed on. **Create it manually**
 
 ## Usage
 

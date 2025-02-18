@@ -1,1 +1,3 @@
 #/bin/zsh
+
+# Custom aliases

@@ -4,6 +4,10 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
+-- git
+map("n", "<leader>gbl", "<cmd>Git blame_line<cr>", { desc = "Git blame line" })
+map("n", "<leader>gbb", "<cmd>Git blame<cr>", { desc = "Git blame" })
+
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 

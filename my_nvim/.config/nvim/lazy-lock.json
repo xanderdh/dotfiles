@@ -3,5 +3,6 @@
   "mason.nvim": { "branch": "main", "commit": "fc98833b6da5de5a9c5b1446ac541577059555be" },
   "nvim-lspconfig": { "branch": "master", "commit": "fb733ac734249ccf293e5c8018981d4d8f59fa8f" },
   "nvim-tree.lua": { "branch": "master", "commit": "44d9b58f11d5a426c297aafd0be1c9d45617a849" },
-  "nvim-treesitter": { "branch": "master", "commit": "d26ce0126694283cf32bf1f4192ef37ef404c037" }
+  "nvim-treesitter": { "branch": "master", "commit": "d26ce0126694283cf32bf1f4192ef37ef404c037" },
+  "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" }
 }

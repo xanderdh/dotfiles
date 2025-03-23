@@ -15,6 +15,6 @@ map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" }
 --map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "nvimtree focus window" })
 
 -- git
--- map("n", "<leader>gbl", "<cmd>Git blame_line<cr>", { desc = "Git blame line" })
--- map("n", "<leader>gbb", "<cmd>Git blame<cr>", { desc = "Git blame" })
+map("n", "<leader>gbl", "<cmd>Git blame_line<cr>", { desc = "Git blame line" })
+map("n", "<leader>gbb", "<cmd>Git blame<cr>", { desc = "Git blame" })
 

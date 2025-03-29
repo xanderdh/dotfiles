@@ -8,7 +8,7 @@ local options = {
 		update_root = false,
 	},
 	view = {
-		width = 40,
+		width = 60,
 		preserve_window_proportions = true,
 	},
 	renderer = {
@@ -20,11 +20,11 @@ local options = {
 			glyphs = {
 				default = "󰈚",
 				folder = {
-					default = "",
-					empty = "",
-					empty_open = "",
-					open = "",
-					symlink = "",
+					--default = "",
+					--empty = "",
+					--empty_open = "",
+					--open = "",
+					--symlink = "",
 				},
 				git = { unmerged = "" },
 			},

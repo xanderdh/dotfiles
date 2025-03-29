@@ -1,6 +1,18 @@
 require("lazy").setup({
-	"neovim/nvim-lspconfig",
-	"nvim-tree/nvim-tree.lua",
+
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			require("plugin_config.lsp-config")
+		end,
+	},
+
+	{
+		"nvim-tree/nvim-tree.lua",
+		config = function()
+			require("plugin_config.nvim-tree")
+		end,
+	},
 
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -37,5 +49,8 @@ require("lazy").setup({
 	{
 		"stevearc/conform.nvim",
 		event = "BufWritePre", -- format on save
+		config = function()
+			require("plugin_config.conform")
+		end,
 	},
 })

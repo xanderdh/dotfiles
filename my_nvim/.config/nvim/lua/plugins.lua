@@ -1,11 +1,12 @@
 require("lazy").setup({
-
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
 			require("plugin_config.lsp-config")
 		end,
 	},
+
+	"nvim-tree/nvim-web-devicons",
 
 	{
 		"nvim-tree/nvim-tree.lua",
@@ -16,13 +17,15 @@ require("lazy").setup({
 
 	{
 		"nvim-treesitter/nvim-treesitter",
+		event = { "BufReadPost", "BufNewFile" },
+		cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
+		build = ":TSUpdate",
 		opts = {
-			ensure_installed = {
-				"vim",
-				"lua",
-				"vimdoc",
-				"html",
-				"css",
+			ensure_installed = { "lua", "luadoc", "printf", "vim", "vimdoc" },
+			indent = { enable = true },
+			highlight = {
+				enable = true,
+				use_languagetree = true,
 			},
 		},
 	},

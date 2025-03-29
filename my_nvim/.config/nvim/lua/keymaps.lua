@@ -15,3 +15,6 @@ map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" }
 -- git
 map("n", "<leader>gbl", "<cmd>Git blame_line<cr>", { desc = "Git blame line" })
 map("n", "<leader>gbb", "<cmd>Git blame<cr>", { desc = "Git blame" })
+
+-- global lsp mappings
+map("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "LSP diagnostic loclist" })

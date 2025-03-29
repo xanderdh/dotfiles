@@ -21,3 +21,4 @@ vim.cmd([[ set termguicolors ]])
 vim.wo.number = true
 
 vim.opt.clipboard = "unnamedplus" -- use system clipboard
+

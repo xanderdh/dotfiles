@@ -58,4 +58,13 @@ require("lazy").setup({
 			require("plugin_config.conform")
 		end,
 	},
+
+	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		cmd = "Telescope",
+		opts = function()
+			return require("plugin_config.telescope")
+		end,
+	},
 })

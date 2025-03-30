@@ -17,4 +17,6 @@ require("options")
 require("keymaps")
 require("plugins")
 
+-- TODO: refactor?
 vim.cmd.colorscheme("catppuccin")
+require("gitsigns").setup()

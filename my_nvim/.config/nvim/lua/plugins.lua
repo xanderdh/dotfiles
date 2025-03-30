@@ -1,13 +1,6 @@
 require("lazy").setup({
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			require("plugin_config.lsp-config")
-		end,
-	},
-
 	"nvim-tree/nvim-web-devicons",
 
 	{
@@ -30,6 +23,14 @@ require("lazy").setup({
 				use_languagetree = true,
 			},
 		},
+	},
+
+	-- lsp stuff
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			require("plugin_config.lspconfig")
+		end,
 	},
 
 	{
@@ -68,7 +69,16 @@ require("lazy").setup({
 		end,
 	},
 
-	-- load luasnips + cmp related in insert mode only
+	-- git stuff
+	{
+		"lewis6991/gitsigns.nvim",
+		event = "User FilePost",
+		opts = function()
+			return require("plugin_config.gitsigns")
+		end,
+	},
+
+	-- load cmp related in insert mode only
 	{
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",

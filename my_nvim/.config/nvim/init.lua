@@ -19,15 +19,25 @@ require("plugins")
 
 -- TODO: refactor below
 
+-- catppuccin setup
 require("catppuccin").setup({
   flavour = "mocha",
-  -- transparent_background = true,
+  transparent_background = true,
   styles = {
     comments = { "italic" },
+    conditionals = { "italic" },
+    integrations = {
+      treesitter = true,
+      cmp = true,
+      gitsigns = true,
+      nvimtree = true,
+    },
   },
 })
 
 vim.o.termguicolors = true
 vim.o.background = "dark"
 vim.cmd.colorscheme("catppuccin")
+
+-- gitsigns setup
 require("gitsigns").setup()

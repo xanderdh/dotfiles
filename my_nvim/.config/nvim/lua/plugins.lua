@@ -29,7 +29,7 @@ require("lazy").setup({
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			require("plugin_config.lspconfig")
+			require("plugin_config.lspconfig").defaults()
 		end,
 	},
 
@@ -83,6 +83,17 @@ require("lazy").setup({
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
 		dependencies = {
+
+			-- snippet plugin
+			{
+				"L3MON4D3/LuaSnip",
+				dependencies = "rafamadriz/friendly-snippets",
+				opts = { history = true, updateevents = "TextChanged,TextChangedI" },
+				config = function(_, opts)
+					require("luasnip").config.set_config(opts)
+					require("plugin_config.luasnip")
+				end,
+			},
 
 			-- autopairing of (){}[] etc
 			{

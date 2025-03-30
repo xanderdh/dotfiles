@@ -23,6 +23,13 @@ require("plugins")
 require("catppuccin").setup({
   flavour = "mocha",
   transparent_background = true,
+  highlight_overrides = {
+    mocha = function(colors)
+      return {
+        CursorLine = { bg = colors.surface0 }, -- Use a predefined Catppuccin color
+      }
+    end,
+  },
   styles = {
     comments = { "italic" },
     conditionals = { "italic" },

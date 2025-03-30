@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 
 -- clear search
-map("n", "<leader>h", ":nohlsearch<CR>")
+map("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
 
 -- Navigate vim panes better
 map("n", "<c-k>", ":wincmd k<CR>")
@@ -13,8 +13,8 @@ map("n", "<c-l>", ":wincmd l<CR>")
 map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" })
 
 -- git
-map("n", "<leader>gbl", "<cmd>Git blame_line<cr>", { desc = "Git blame line" })
-map("n", "<leader>gbb", "<cmd>Git blame<cr>", { desc = "Git blame" })
+map("n", "<leader>gl", "<cmd>Git blame_line<cr>", { desc = "Git blame line" })
+map("n", "<leader>gb", "<cmd>Git blame<cr>", { desc = "Git blame" })
 
 -- global lsp mappings
 map("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "LSP diagnostic loclist" })

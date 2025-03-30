@@ -54,7 +54,7 @@ require("lazy").setup({
 
   {
     "stevearc/conform.nvim",
-    -- event = "BufWritePre", -- format on save
+    event = "BufWritePre", -- format on save
     config = function()
       require("plugin_config.conform")
     end,

@@ -28,6 +28,12 @@ vim.wo.number = true
 
 vim.opt.clipboard = "unnamedplus" -- use system clipboard
 
+-- Start scrolling 5 rows before the top or bottom of the screen
+vim.opt.scrolloff = 5
+
+-- Add visual guides for columns ("80,120")
+vim.opt.colorcolumn = "80"
+
 -- add binaries installed by mason.nvim to path
 local is_windows = vim.fn.has("win32") ~= 0
 local sep = is_windows and "\\" or "/"

@@ -23,6 +23,7 @@ require("plugins")
 require("catppuccin").setup({
   flavour = "mocha",
   transparent_background = true,
+
   highlight_overrides = {
     mocha = function(colors)
       return {
@@ -30,6 +31,7 @@ require("catppuccin").setup({
       }
     end,
   },
+
   styles = {
     comments = { "italic" },
     conditionals = { "italic" },

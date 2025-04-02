@@ -89,4 +89,10 @@ M.defaults = function()
   end
 end
 
+-- lsp diagnostic config
+vim.diagnostic.config({
+  virtual_text = true, -- enable ghost text nexto to the error line
+  signs = false, -- disable error signs in the left side
+})
+
 return M

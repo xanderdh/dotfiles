@@ -18,6 +18,7 @@ map("n", "<leader>gb", "<cmd>Git blame<cr>", { desc = "Git blame" })
 
 -- global lsp mappings
 map("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "LSP diagnostic loclist" })
+map("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "LSP open float message" })
 
 -- telescope
 map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })

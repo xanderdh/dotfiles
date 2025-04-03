@@ -52,14 +52,8 @@ local options = {
   },
 
   window = {
-    completion = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-      winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
-    },
-    documentation = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-      winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
-    },
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
 }
 

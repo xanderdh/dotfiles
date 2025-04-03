@@ -17,8 +17,13 @@ map("n", "<leader>gl", "<cmd>Git blame_line<cr>", { desc = "Git blame line" })
 map("n", "<leader>gb", "<cmd>Git blame<cr>", { desc = "Git blame" })
 
 -- global lsp mappings
+-- TODO: why diagnostic and hover keymaps should be here?
+--  hover works weird when inside LspOnAttach
 map("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "LSP diagnostic loclist" })
 map("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "LSP open float message" })
+map("n", "K", function()
+  vim.lsp.buf.hover({ border = "single", max_height = 25, max_width = 120 })
+end)
 
 -- telescope
 map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })

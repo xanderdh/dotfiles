@@ -21,6 +21,7 @@ M.on_attach = function(_, bufnr)
   end, opts("List workspace folders"))
 
   map("n", "<leader>D", vim.lsp.buf.type_definition, opts("Go to type definition"))
+  -- TODO: implement global rename keymap
   -- map("n", "<leader>ra", require("nvchad.lsp.renamer"), opts("NvRenamer"))
 
   map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts("Code action"))
@@ -93,6 +94,7 @@ end
 vim.diagnostic.config({
   virtual_text = true, -- enable ghost text nexto to the error line
   signs = false, -- disable error signs in the left side
+  float = { border = "rounded" }, -- show rounded border for the lsp floating window
 })
 
 return M

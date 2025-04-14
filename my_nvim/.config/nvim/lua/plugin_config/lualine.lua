@@ -1,1 +1,5 @@
-require("lualine").setup()
+local config = {
+  theme = "catppuccin",
+}
+
+require("lualine").setup(config)

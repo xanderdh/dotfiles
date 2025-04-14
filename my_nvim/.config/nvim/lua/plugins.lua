@@ -2,6 +2,13 @@ require("lazy").setup({
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   "nvim-tree/nvim-web-devicons",
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("plugin_config.lualine")
+    end,
+  },
 
   {
     "nvim-tree/nvim-tree.lua",

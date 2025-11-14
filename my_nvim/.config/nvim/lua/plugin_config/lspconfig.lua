@@ -56,37 +56,73 @@ M.capabilities.textDocument.completion.completionItem = {
 }
 
 M.defaults = function()
-  require("lspconfig").lua_ls.setup({
-    on_attach = M.on_attach,
-    capabilities = M.capabilities,
-    on_init = M.on_init,
+  -- Migration note:
+  -- nvim-lspconfig v3 will remove the legacy `require('lspconfig').<server>.setup{}` calls.
+  -- Preferred API (Nvim 0.11+):
+  --   vim.lsp.config('<server>', { ... })  -- define/extend config
+  --   vim.lsp.enable('<server>')            -- enable config
+  -- We keep a fallback for older versions (<=0.10) that don't expose vim.lsp.config.
 
-    settings = {
-      Lua = {
-        diagnostics = {
-          globals = { "vim" },
+  local lua_settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        library = {
+          vim.fn.expand("$VIMRUNTIME/lua"),
+          vim.fn.expand("$VIMRUNTIME/lua/vim/lsp"),
+          vim.fn.stdpath("data") .. "/lazy/lazy.nvim/lua/lazy",
+          "${3rd}/luv/library",
         },
-        workspace = {
-          library = {
-            vim.fn.expand("$VIMRUNTIME/lua"),
-            vim.fn.expand("$VIMRUNTIME/lua/vim/lsp"),
-            vim.fn.stdpath("data") .. "/lazy/lazy.nvim/lua/lazy",
-            "${3rd}/luv/library",
-          },
-          maxPreload = 100000,
-          preloadFileSize = 10000,
-        },
+        maxPreload = 100000,
+        preloadFileSize = 10000,
       },
     },
-  })
+  }
 
-  -- lsps with default config
-  for _, lsp in ipairs(servers) do
-    require("lspconfig")[lsp].setup({
+  if vim.lsp and vim.lsp.config and vim.lsp.enable then
+    -- New API path
+    vim.lsp.config("lua_ls", {
       on_attach = M.on_attach,
-      on_init = M.on_init,
       capabilities = M.capabilities,
+      on_init = M.on_init,
+      settings = lua_settings,
     })
+    vim.lsp.enable("lua_ls")
+
+    for _, lsp in ipairs(servers) do
+      vim.lsp.config(lsp, {
+        on_attach = M.on_attach,
+        on_init = M.on_init,
+        capabilities = M.capabilities,
+      })
+      vim.lsp.enable(lsp)
+    end
+  else
+    -- Legacy fallback
+    local ok, lspconfig = pcall(require, "lspconfig")
+    if not ok then
+      vim.schedule(function()
+        vim.notify("lspconfig not found; LSP servers not configured", vim.log.levels.ERROR)
+      end)
+      return
+    end
+
+    lspconfig.lua_ls.setup({
+      on_attach = M.on_attach,
+      capabilities = M.capabilities,
+      on_init = M.on_init,
+      settings = lua_settings,
+    })
+
+    for _, lsp in ipairs(servers) do
+      lspconfig[lsp].setup({
+        on_attach = M.on_attach,
+        on_init = M.on_init,
+        capabilities = M.capabilities,
+      })
+    end
   end
 end
 

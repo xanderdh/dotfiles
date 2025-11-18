@@ -43,3 +43,4 @@ vim.env.PATH = table.concat({ vim.fn.stdpath("data"), "mason", "bin" }, sep) .. 
 -- spelling
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
+vim.opt.spelloptions = "camel" -- recognize camelCase words

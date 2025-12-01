@@ -23,7 +23,7 @@ require("lazy").setup({
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     build = ":TSUpdate",
     opts = {
-      ensure_installed = { "lua", "luadoc", "printf", "vim", "vimdoc" },
+      ensure_installed = { "lua", "luadoc", "printf", "vim", "vimdoc", "python" },
       indent = { enable = true },
       highlight = {
         enable = true,
@@ -49,6 +49,9 @@ require("lazy").setup({
         "html-lsp",
         "css-lsp",
         "prettier",
+        "pyright",
+        "black",
+        "isort",
       },
     },
   },

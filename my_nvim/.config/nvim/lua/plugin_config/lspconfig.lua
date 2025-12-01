@@ -1,4 +1,4 @@
-local servers = { "html", "cssls", "ts_ls", "jdtls", "yamlls", "pylsp" }
+local servers = { "html", "cssls", "ts_ls", "jdtls", "yamlls", "pyright" }
 
 local M = {}
 local map = vim.keymap.set

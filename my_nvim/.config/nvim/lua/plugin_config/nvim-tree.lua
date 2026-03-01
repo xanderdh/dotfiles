@@ -30,7 +30,7 @@ local options = {
       },
     },
   },
-  filters = { dotfiles = false },
+  filters = { dotfiles = false, git_ignored = false },
 }
 
 require("nvim-tree").setup(options)

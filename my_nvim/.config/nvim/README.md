@@ -10,6 +10,7 @@ This directory contains a minimal Neovim setup managed by `lazy.nvim`.
 - `lua/plugins.lua` – plugin specifications for lazy.nvim
 - `lua/plugin_config/` – per‑plugin configuration modules
 - `lua/plugin_config/lspconfig.lua` – LSP client configuration (migrated to new API)
+- `lua/plugin_config/treesitter.lua` – Tree-sitter parser install + FileType setup
 
 ## LSP Migration Notes
 

@@ -19,17 +19,14 @@ require("lazy").setup({
 
   {
     "nvim-treesitter/nvim-treesitter",
-    event = { "BufReadPost", "BufNewFile" },
-    cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
-    build = ":TSUpdate",
-    opts = {
-      ensure_installed = { "lua", "luadoc", "printf", "vim", "vimdoc", "python" },
-      indent = { enable = true },
-      highlight = {
-        enable = true,
-        use_languagetree = true,
-      },
-    },
+    branch = "main",
+    lazy = false,
+    build = function()
+      require("plugin_config.treesitter").install()
+    end,
+    config = function()
+      require("plugin_config.treesitter").setup()
+    end,
   },
 
   {

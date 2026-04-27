@@ -12,6 +12,16 @@ This directory contains a minimal Neovim setup managed by `lazy.nvim`.
 - `lua/plugin_config/lspconfig.lua` – LSP client configuration (migrated to new API)
 - `lua/plugin_config/treesitter.lua` – Tree-sitter parser install + FileType setup
 
+## Tree-sitter Prerequisites
+
+The `nvim-treesitter` `main` branch in this config expects:
+
+- Neovim `0.12+`
+- `tree-sitter-cli` in `PATH`
+- a working C compiler in `PATH`
+
+If `tree-sitter` is missing on a fresh macOS/Linux machine, parser installation is skipped with a warning instead of failing hard. After installing the CLI, rerun `:Lazy sync nvim-treesitter`.
+
 ## LSP Migration Notes
 
 Neovim 0.11+ introduces `vim.lsp.config` / `vim.lsp.enable` which deprecates the legacy:

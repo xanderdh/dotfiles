@@ -1,0 +1,172 @@
+[
+  {
+    "plugin_id": "beyondlex.herdr-recent-navigator",
+    "name": "Herdr Recent Navigator",
+    "version": "0.6.2",
+    "min_herdr_version": "0.7.4",
+    "description": "Recent workspaces, tabs, panes, and AI agents switcher for Herdr.",
+    "manifest_path": "/Users/Denys_Volchenkov/.config/herdr/plugins/github/beyondlex.herdr-recent-navigator-0ad88a9d386a/herdr-plugin.toml",
+    "plugin_root": "/Users/Denys_Volchenkov/.config/herdr/plugins/github/beyondlex.herdr-recent-navigator-0ad88a9d386a",
+    "enabled": true,
+    "platforms": [
+      "macos",
+      "linux"
+    ],
+    "build": [
+      {
+        "platforms": [
+          "macos",
+          "linux"
+        ],
+        "command": [
+          "cargo",
+          "build",
+          "--release"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "focus-agents",
+        "title": "Quick Focus: Agents",
+        "description": "Open navigator focused on Agents tab",
+        "contexts": [
+          "global",
+          "workspace"
+        ],
+        "command": [
+          "./target/release/herdr-recent-navigator",
+          "--pane-open",
+          "--view",
+          "agents"
+        ]
+      },
+      {
+        "id": "focus-panes",
+        "title": "Quick Focus: Panes",
+        "description": "Open navigator focused on Panes tab",
+        "contexts": [
+          "global",
+          "workspace"
+        ],
+        "command": [
+          "./target/release/herdr-recent-navigator",
+          "--pane-open",
+          "--view",
+          "panes"
+        ]
+      },
+      {
+        "id": "focus-previous-pane",
+        "title": "Quick Focus: Previous Pane",
+        "description": "Jump to the most recently focused pane without opening the navigator",
+        "contexts": [
+          "global",
+          "workspace"
+        ],
+        "command": [
+          "./target/release/herdr-recent-navigator",
+          "quick-focus-previous-pane"
+        ]
+      },
+      {
+        "id": "focus-previous-tab",
+        "title": "Quick Focus: Previous Tab",
+        "description": "Jump to the most recently focused tab without opening the navigator",
+        "contexts": [
+          "global",
+          "workspace"
+        ],
+        "command": [
+          "./target/release/herdr-recent-navigator",
+          "quick-focus-previous-tab"
+        ]
+      },
+      {
+        "id": "focus-tabs",
+        "title": "Quick Focus: Tabs",
+        "description": "Open navigator focused on Tabs tab",
+        "contexts": [
+          "global",
+          "workspace"
+        ],
+        "command": [
+          "./target/release/herdr-recent-navigator",
+          "--pane-open",
+          "--view",
+          "tabs"
+        ]
+      },
+      {
+        "id": "focus-workspaces",
+        "title": "Quick Focus: Workspaces",
+        "description": "Open navigator focused on Workspaces tab",
+        "contexts": [
+          "global",
+          "workspace"
+        ],
+        "command": [
+          "./target/release/herdr-recent-navigator",
+          "--pane-open",
+          "--view",
+          "workspaces"
+        ]
+      },
+      {
+        "id": "open",
+        "title": "Open Navigator",
+        "description": "Open the recent items navigator",
+        "contexts": [
+          "global",
+          "workspace"
+        ],
+        "command": [
+          "./target/release/herdr-recent-navigator",
+          "--pane-open"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "on": "pane.focused",
+        "command": [
+          "./target/release/herdr-recent-navigator",
+          "track"
+        ]
+      },
+      {
+        "on": "tab.focused",
+        "command": [
+          "./target/release/herdr-recent-navigator",
+          "track"
+        ]
+      },
+      {
+        "on": "workspace.focused",
+        "command": [
+          "./target/release/herdr-recent-navigator",
+          "track"
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "navigator",
+        "title": "Recent Navigator",
+        "placement": "popup",
+        "width": "60%",
+        "command": [
+          "./target/release/herdr-recent-navigator"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "beyondlex",
+      "repo": "herdr-recent-navigator",
+      "resolved_commit": "79cd2feaa8e493da32c230950545ec4c5ce2743b",
+      "managed_path": "/Users/Denys_Volchenkov/.config/herdr/plugins/github/beyondlex.herdr-recent-navigator-0ad88a9d386a",
+      "installed_unix_ms": 1785337530429
+    }
+  }
+]

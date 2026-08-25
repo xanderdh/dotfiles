@@ -48,3 +48,6 @@ map(
 -- Comment
 map("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
 map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
+
+-- markdown
+map("n", "<leader>mp", "<cmd>RenderMarkdown toggle<CR>", { desc = "toggle markdown render" })

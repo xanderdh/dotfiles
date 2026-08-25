@@ -107,7 +107,7 @@ function M.setup()
 
   vim.api.nvim_create_autocmd("FileType", {
     group = group,
-    pattern = { "help", "lua", "python", "vim" },
+    pattern = { "help", "lua", "markdown", "python", "vim" },
     callback = function(event)
       M.enable(event.buf)
     end,

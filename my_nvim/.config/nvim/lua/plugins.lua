@@ -94,6 +94,15 @@ require("lazy").setup({
     end,
   },
 
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    ft = "markdown",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    opts = function()
+      return require("plugin_config.render-markdown")
+    end,
+  },
+
   -- load cmp related in insert mode only
   {
     "hrsh7th/nvim-cmp",

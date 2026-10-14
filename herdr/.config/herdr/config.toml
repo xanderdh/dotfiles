@@ -101,7 +101,7 @@ previous_tab = "prefix+shift+tab"
 # focus_pane_right = "prefix+l"
 cycle_pane_next = ""
 cycle_pane_previous = ""
-# last_pane = ""          # optional, unset by default; bind e.g. "prefix+tab" for global back-and-forth
+last_pane = "prefix+tab"  # native back-and-forth (replaces herdr-last-tab scripts)
 # split_vertical = "prefix+v"
 # split_horizontal = "prefix+minus"
 # close_pane = "prefix+x"
@@ -130,12 +130,6 @@ cycle_pane_previous = ""
 # command = "lazygit"
 # width = "80%"
 # height = "80%"
-
-[[keys.command]]
-key = "prefix+tab"
-type = "plugin_action"
-command = "beyondlex.herdr-recent-navigator.focus-previous-tab"
-description = "Jump to previously focused tab"
 
 [[keys.command]]
 key = "prefix+t"

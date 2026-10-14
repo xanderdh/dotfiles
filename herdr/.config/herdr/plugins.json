@@ -128,21 +128,21 @@
     ],
     "events": [
       {
-        "on": "pane.focused",
+        "on": "pane.focus",
         "command": [
           "./target/release/herdr-recent-navigator",
           "track"
         ]
       },
       {
-        "on": "tab.focused",
+        "on": "tab.focus",
         "command": [
           "./target/release/herdr-recent-navigator",
           "track"
         ]
       },
       {
-        "on": "workspace.focused",
+        "on": "workspace.focus",
         "command": [
           "./target/release/herdr-recent-navigator",
           "track"
